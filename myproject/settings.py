@@ -102,10 +102,8 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # DATABASES["DEFAULT"] = dj_database_url.parse("database_url")
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://fooddeliverydb_user:yLFDTg1Cqs7XXJl5TqLxFyTPcphgxk5m@dpg-cncfnfun7f5s73bgd7eg-a.oregon-postgres.render.com/fooddeliverydb')
+    'default' : dj_database_url.parse(env('DATABASE_URL'))
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
