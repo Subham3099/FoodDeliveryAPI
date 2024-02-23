@@ -14,7 +14,7 @@ def calculate_view(request):
             
             # Query the Pricing table
             try:
-                pricing_info = Pricing.objects.get(type=item_type, organization=organization_id,zone=zone_v)
+                pricing_info = Pricing.objects.get(item=item_id, organization=organization_id,zone=zone_v)
                 base_distance_in_km = pricing_info.base_distance_in_km
                 km_price = pricing_info.km_price
                 fix_price = pricing_info.fix_price
