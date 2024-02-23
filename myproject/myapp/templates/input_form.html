@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box-shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form method="post">
+        <h1>Enter Item delivery details</h1>
+        {% csrf_token %}
+        <label for="zone">Zone:</label>
+        <input type="text" id="zone" name="zone">
+
+        <label for="organization_id">Organization ID:</label>
+        <input type="text" id="organization_id" name="organization_id">
+
+        <label for="total_distance">Total Distance:</label>
+        <input type="number" id="total_distance" name="total_distance" min="1" step="1" required>
+
+        <label for="item_type">Item Type:</label>
+        <input type="text" id="item_type" name="item_type">
+
+        <label for="item_id">Item ID:</label>
+        <input type="text" id="item_id" name="item_id">
+
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
