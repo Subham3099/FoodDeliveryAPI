@@ -1,0 +1,36 @@
+<!-- pricing_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing List</title>
+</head>
+<body>
+    <h1>Pricing List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Organization</th>
+                <th>Item</th>
+                <th>Zone</th>
+                <th>Base Distance (km)</th>
+                <th>Price per km</th>
+                <th>Fixed Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pricing in pricings %}
+            <tr>
+                <td>{{ pricing.organization }}</td>
+                <td>{{ pricing.item }}</td>
+                <td>{{ pricing.zone }}</td>
+                <td>{{ pricing.base_distance_in_km }}</td>
+                <td>{{ pricing.km_price }}</td>
+                <td>{{ pricing.fix_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

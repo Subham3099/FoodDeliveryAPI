@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from .forms import CalculationForm
-from .models import Pricing
+from django.shortcuts import render,redirect
+from .forms import CalculationForm,OrganizationForm, ItemForm, PricingForm
+from .models import Pricing,Organization, Item
 
 def calculate_view(request):
     if request.method == 'POST':
@@ -32,3 +32,49 @@ def calculate_view(request):
         form = CalculationForm()
     
     return render(request, 'input_form.html', {'form': form})
+
+# Organization views
+def organization_list(request):
+    organizations = Organization.objects.all()
+    return render(request, 'organization_list.html', {'organizations': organizations})
+
+def organization_create(request):
+    if request.method == 'POST':
+        form = OrganizationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('organization_list')
+    else:
+        form = OrganizationForm()
+    return render(request, 'organization_form.html', {'form': form})
+
+# Item views
+def item_list(request):
+    items = Item.objects.all()
+    return render(request, 'item_list.html', {'items': items})
+
+def item_create(request):
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('item_list')
+    else:
+        form = ItemForm()
+    return render(request, 'item_form.html', {'form': form})
+
+# Pricing views
+def pricing_list(request):
+    pricings = Pricing.objects.all()
+    return render(request, 'pricing_list.html', {'pricings': pricings})
+
+def pricing_create(request):
+    if request.method == 'POST':
+        form = PricingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('pricing_list')
+    else:
+        form = PricingForm()
+    return render(request, 'pricing_form.html', {'form': form})
+
