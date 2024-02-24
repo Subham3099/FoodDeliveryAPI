@@ -10,11 +10,12 @@ def calculate_view(request):
             organization_id = form.cleaned_data['organization_id']
             total_distance = form.cleaned_data['total_distance']
             item_type = form.cleaned_data['item_type']
-            item_id = form.cleaned_data['item_id']
             
             # Query the Pricing table
             try:
-                pricing_info = Pricing.objects.get(item=item_id, organization=organization_id,zone=zone_v)
+                Item_info = Item.objects.get(type=item_type) 
+                obitem_id = Item_info.id
+                pricing_info = Pricing.objects.get(item_id= obitem_id , organization=organization_id,zone=zone_v)
                 base_distance_in_km = pricing_info.base_distance_in_km
                 km_price = pricing_info.km_price
                 fix_price = pricing_info.fix_price
