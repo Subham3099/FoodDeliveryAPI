@@ -1,127 +1,90 @@
-<!-- pricing_form.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Pricing</title>
-</head>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            background-image: url('/static/1i.jpg'); /* Replace 'your-image.jpg' with the actual image file name */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh; /* Ensure the body takes up the full height of the viewport */
-        }
-
-        #sidebar {
-            width: 300px;
             height: 100vh;
-            background-color: #0e172a;
-            color: white;
-            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        #main-content {
-            flex-grow: 1;
-            padding: 20px;
-            background-color: #f9f9f9;
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
-        h2, h3 {
-            color: #000000;
-            margin-bottom: 20px;
+        h1 {
             text-align: center;
-        }
-
-        .section {
-            display: none;
-            padding: 50px;
-            align-self: center;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1000px; /* Adjust the max-width as needed */
-        }
-        .section:hover {
-            background-color: #e0e0e0;
-        }
-
-        #fetchResult {
-            margin-top: 10px;
+            margin-bottom: 30px;
             color: #333;
         }
 
-        table {
-            width: 900px;
-            border-collapse: collapse;
-            margin-top: 20px;
+        label {
+            font-weight: bold;
         }
 
-        th, td {
-            border: 1px solid #67ca54;
-            padding: 15px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        /* Center and style the forms */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #555;
-        }
-
-        form input {
-            width: 500px;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        form button {
-            background-color: #4CAF50;
+        button[type="submit"] {
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 15px;
-            border-radius: 8px;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
             cursor: pointer;
-            font-size: 18px;
         }
 
-        form button:hover {
-            background-color: #45a049;
+        button[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
+</head>
 <body>
-    <h1>Create Pricing</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto form-container">
+                <h1>Create Pricing</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="organization_id">Organization ID</label>
+                        {{ form.organization_id }}
+                    </div>
+                    <div class="form-group">
+                        <label for="item_id">Item ID</label>
+                        {{ form.item_id }}
+                    </div>
+                    <div class="form-group">
+                        <label for="zone">Zone</label>
+                        {{ form.zone }}
+                    </div>
+                    <div class="form-group">
+                        <label for="base_distance_in_km">Base Distance (km)</label>
+                        {{ form.base_distance_in_km }}
+                    </div>
+                    <div class="form-group">
+                        <label for="km_price">Price per km</label>
+                        {{ form.km_price }}
+                    </div>
+                    <div class="form-group">
+                        <label for="fix_price">Fixed Price</label>
+                        {{ form.fix_price }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
