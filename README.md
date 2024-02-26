@@ -65,3 +65,8 @@ Detailed API documentation can be found in the source code.
 
 ## Test Suite
 Comprehensive test suite covering major functionalities and edge cases.
+
+## How to Use
+Goto deployed link 'https://fooddeliveryapi-5v60.onrender.com/calculate/' to calculate the delivery price.
+to add orgainizations , items and prices add it using above links for adding .
+Prices has Foriegn Key so remember to add to organizations and items first .
