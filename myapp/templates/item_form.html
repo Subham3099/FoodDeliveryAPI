@@ -4,45 +4,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Organization</title>
 </head>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-    }
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
 
-    table, th, td {
-        border: 1px solid #ddd;
-    }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-    th, td {
-        padding: 8px;
-        text-align: left;
-    }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
 
-    th {
-        background-color: #f2f2f2;
-    }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+        button:hover {
+            background-color: #45a049;
+        }
 
-    tr:hover {
-        background-color: #ddd;
-    }
-</style>
+        /* Hover effect */
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box-shadow on hover */
+        }
+    </style>
 <body>
     <h1>Create Organization</h1>
     <form method="post">

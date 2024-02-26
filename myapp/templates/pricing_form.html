@@ -4,78 +4,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Pricing</title>
 </head>
 <style>
-	/* Updated CSS */
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-	body {
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		background-image: url('/static/1i.jpg');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		min-height: 100vh;
-	}
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-	.container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
+        h1 {
+            text-align: center;
+            color: #333;
+        }
 
-	.form-container {
-		width: 90%;
-		max-width: 600px;
-		padding: 40px;
-		border-radius: 10px;
-		background-color: rgba(255, 255, 255, 0.9);
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-	}
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-	h1 {
-		color: #333;
-		text-align: center;
-		margin-bottom: 30px;
-	}
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
 
-	.form-group {
-		margin-bottom: 20px;
-	}
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-	.form-group label {
-		font-size: 18px;
-		color: #555;
-	}
+        button:hover {
+            background-color: #45a049;
+        }
 
-	.form-control {
-		width: 100%;
-		padding: 12px;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		font-size: 16px;
-	}
-
-	button[type="submit"] {
-		background-color: #4CAF50;
-		color: white;
-		border: none;
-		padding: 15px 30px;
-		border-radius: 5px;
-		cursor: pointer;
-		font-size: 18px;
-		transition: background-color 0.3s;
-	}
-
-	button[type="submit"]:hover {
-		background-color: #45a049;
-	}
-</style>
+        /* Hover effect */
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box-shadow on hover */
+        }
+    </style>
 <body>
     <h1>Create Pricing</h1>
     <form method="post">
