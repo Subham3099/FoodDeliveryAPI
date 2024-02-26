@@ -55,10 +55,10 @@ Log in with the superuser credentials created earlier.
 
 ## API Endpoints:
 
-Calculate View: [http://localhost:8000/calculate/]
-Organization List/Create: [http://localhost:8000/organization/list/] & [http://localhost:8000/organization/create/]
-Item List/Create: [http://localhost:8000/item/list/] & [http://localhost:8000/item/create/]
-Pricing List/Create: [http://localhost:8000/pricing/list/] & [http://localhost:8000/pricing/create/]
+Calculate View: 'http://localhost:8000/calculate/'
+Organization List/Create: 'http://localhost:8000/organization/list/' & 'http://localhost:8000/organization/create/'
+Item List/Create: 'http://localhost:8000/item/list/' & 'http://localhost:8000/item/create/'
+Pricing List/Create: 'http://localhost:8000/pricing/list/' & 'http://localhost:8000/pricing/create/'
 
 ## API Documentation
 Detailed API documentation can be found in the source code.
