@@ -68,5 +68,12 @@ Comprehensive test suite covering major functionalities and edge cases.
 
 ## How to Use
 Goto deployed link 'https://fooddeliveryapi-5v60.onrender.com/calculate/' to calculate the delivery price.
-to add orgainizations , items and prices add it using above links for adding .
-Prices has Foriegn Key so remember to add to organizations and items first .
+to add orgainizations , items and prices add it using below links for adding .
+'https://fooddeliveryapi-5v60.onrender.com/organization/create/'
+'https://fooddeliveryapi-5v60.onrender.com/item/create/'
+'https://fooddeliveryapi-5v60.onrender.com/pricing/create/'
+Ensure that the Prices table includes foreign keys linking to the Organizations and Items tables. These foreign keys should correspond to the organization_id and item_id columns, respectively, in the Prices table.
+
+
+
+
