@@ -68,8 +68,9 @@
         }
     </style>
 <body>
-    <h1>Create Pricing</h1>
+    
     <form method="post">
+		<h1>Create Pricing</h1>
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>

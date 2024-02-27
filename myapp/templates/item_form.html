@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Organization</title>
+    <title>Create Item</title>
 </head>
 <style>
         /* CSS styles */
@@ -68,8 +68,9 @@
         }
     </style>
 <body>
-    <h1>Create Organization</h1>
+    
     <form method="post">
+		<h1>Create Item</h1>
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
